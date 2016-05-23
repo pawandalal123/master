@@ -1,0 +1,43 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Sell extends CI_Model {
+	
+	public function __construct() {
+		parent::__construct();	
+	}
+
+	public function isExsits($table = null, $conditions = array()){
+		if($table != null){
+			$total = $this->db->where($conditions)
+							  ->count_all_results($table);
+			if($total == 1) {
+				return true;
+			}								
+		}
+		return false;
+	}
+	
+    public function allproductsListing($subCategoryID=false,$limit = false){
+		if($subCategoryID){
+			$this->db->where($subCategoryID);
+		}
+		if($limit){
+			$this->db->limit($limit);
+		}
+		$ListingData = $this->db->group_by('product_id')
+		                            ->get('sell_product');
+									
+									if($ListingData->num_rows()>0)
+									{
+				 					$sellListingData = $ListingData->result();
+									}
+									else
+									{
+										$sellListingData=0;
+									}
+									echo $this->db->last_query();
+		return $sellListingData;
+	  }
+	
+}
+

@@ -1,0 +1,76 @@
+ul.tabs {
+float:left;
+list-style:none;
+height:48px;
+width:100%;
+/*border-radius:8px 0 -50px 0;*/
+margin:0;
+padding:0;
+}
+
+ul.tabs li {
+float:left;
+height:41px;
+line-height:41px;
+border:1px solid #d0d0d0;
+overflow:hidden;
+position:relative;
+background:#f7f7f7;
+color:#8d8d8d;
+/*-webkit-border-top-left-radius:8px;
+-webkit-border-top-right-radius:8px;
+-moz-border-radius-topleft:8px;
+-moz-border-radius-topright:8px;
+border-top-left-radius:8px;
+border-top-right-radius:8px;*/
+margin:0 5px -1px 0;
+padding:0;
+}
+
+ul.tabs li a {
+text-decoration:none;
+color:#444;
+display:block;
+font-size:15px;
+border:1px solid #fff;
+outline:none;
+/*-webkit-border-top-left-radius:8px;
+-webkit-border-top-right-radius:8px;
+-moz-border-radius-topleft:8px;
+-moz-border-radius-topright:8px;
+border-top-left-radius:8px;
+border-top-right-radius:8px;*/
+padding:0 20px;
+}
+
+ul.tabs li a:hover {
+background:#f0f0f0;
+}
+html ul.tabs li.active {
+background:#fff;
+border-bottom:1px solid #fff;
+height:47px;
+}
+html ul.tabs li.active a:hover {
+background:#fff;
+border-bottom:1px solid #fff;
+}
+
+.tabContainer {
+border:1px solid #d0d0d0;
+overflow:hidden;
+clear:both;
+float:left;
+width:100%;
+background:#fff;
+/*-webkit-border-radius:8px;
+-webkit-border-top-left-radius:0;
+-moz-border-radius:8px;
+-moz-border-radius-topleft:0;
+border-radius:8px;
+border-top-left-radius:0;*/
+}
+
+.tabContent {
+padding:20px;
+}

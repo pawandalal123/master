@@ -1,0 +1,112 @@
+<?php 
+$CategoryName = $CategoryName;
+$CategoryID = $CategoryID;
+$subcategory= $this->common->sellproductSubCategory(false,$CategoryID,15);
+      
+?>
+
+<div class="mainContainer">
+    <div class="topBanner clearfix container">
+    
+    <!-- left sidebar start -->
+    <div class="leftside">
+    <!-- Search By Keyword -->
+    	<div class="search_by_key">
+        <h3>Search by Keywords</h3>
+        <div class="search_form clearfix">
+        	<input type="text" class="keyword_box" name="textfield" placeholder="E.g. mobile, car, sofa..." id="textfield" />
+            <input type="submit" name="button" class="submit_btn2" id="button" value="Go" />
+        </div>        
+        </div>
+    <!-- Search By Keyword end -->
+
+<!-- filter box start -->
+<div class="left_grey_box">
+        <a href="#" class="category_heading">All Categories</a>
+        <div class="search_form clearfix">
+        	<ul class="buy_sell_category_list">
+                <li><a href="<?php echo SITE_URL;?>productsell/productlist/<?php echo $CategoryName.'./'.$CategoryID; ?>"><?php echo $CategoryName;?></a>
+                	<ul>
+                    <?php foreach($subcategory as $subcategorydata)
+					{ ?>
+                	<li><a href="#"><?php echo $subcategorydata->category_name;?></a></li>
+                    <?php } ?>
+                </ul>
+            </li>
+            </ul>
+        </div>        
+        </div>
+<!-- filter box end -->
+
+    </div>
+    <!-- left sidebar end -->
+    
+    
+        <div class="right_content">
+        <!-- detail page start -->
+        <div class="detail_box">
+       		<div class="list_button_box clearfix">
+            	<a href="#" class="list_view_active fl">List View</a>
+                <a href="#" class="grid_view fl">Grid View</a>
+                <p class="fr">Sort By:
+                                <select>
+                                    <option selected>Most Recent Ads</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                </select>
+                </p>
+            </div>
+          <div class="list_view_result clearfix">
+                <div class="grid_view_result1">
+                	<div class="grid_view_img"><a href="#"><img src="<?php echo WEBROOT_PATH_IMAGES;?>/grid_img1.jpg"></a></div>
+                    <div class="grid_view_hd"><h3><a href="#">nokia lumia 529</a></h3><p>Medinipur | Mobile Phones </p></div>
+                    <div class="grid_view_price">र 2,300</div>
+                  <div class="grid_view_date">Today 6:19am </div>
+                </div>
+                
+               <div class="grid_view_result1">
+                	<div class="grid_view_img"><a href="#"><img src="<?php echo WEBROOT_PATH_IMAGES;?>/grid_img1.jpg"></a></div>
+                    <div class="grid_view_hd"><h3><a href="#">nokia lumia 529</a></h3><p>Medinipur | Mobile Phones </p></div>
+                    <div class="grid_view_price">र 2,300</div>
+                  <div class="grid_view_date">Today 6:19am </div>
+                </div>
+               
+               <div class="grid_view_result1">
+                	<div class="grid_view_img"><a href="#"><img src="<?php echo WEBROOT_PATH_IMAGES;?>/grid_img1.jpg"></a></div>
+                    <div class="grid_view_hd"><h3><a href="#">nokia lumia 529</a></h3><p>Medinipur | Mobile Phones </p></div>
+                    <div class="grid_view_price">र 2,300</div>
+                  <div class="grid_view_date">Today 6:19am </div>
+                </div>
+                
+                <div class="grid_view_result1">
+                	<div class="grid_view_img"><a href="#"><img src="<?php echo WEBROOT_PATH_IMAGES;?>/grid_img1.jpg"></a></div>
+                    <div class="grid_view_hd"><h3><a href="#">nokia lumia 529</a></h3><p>Medinipur | Mobile Phones </p></div>
+                    <div class="grid_view_price">र 2,300</div>
+                  <div class="grid_view_date">Today 6:19am </div>
+                </div>
+                
+                <div class="grid_view_result1">
+                	<div class="grid_view_img"><a href="#"><img src="<?php echo WEBROOT_PATH_IMAGES;?>/grid_img1.jpg"></a></div>
+                    <div class="grid_view_hd"><h3><a href="#">nokia lumia 529</a></h3><p>Medinipur | Mobile Phones </p></div>
+                    <div class="grid_view_price">र 2,300</div>
+                  <div class="grid_view_date">Today 6:19am </div>
+                </div>
+                
+                <div class="grid_view_result1">
+                	<div class="grid_view_img"><a href="#"><img src="<?php echo WEBROOT_PATH_IMAGES;?>/grid_img1.jpg"></a></div>
+                    <div class="grid_view_hd"><h3><a href="#">nokia lumia 529</a></h3><p>Medinipur | Mobile Phones </p></div>
+                    <div class="grid_view_price">र 2,300</div>
+                  <div class="grid_view_date">Today 6:19am </div>
+                </div>
+                
+            </div>
+            <!-- grid view end -->
+            
+            
+            
+        </div>
+        <!-- detail page end -->
+        </div>
+    
+    </div>
+  </div>
