@@ -435,7 +435,7 @@ public function add_category(){
 //deleteCat() action delete the specified category	
 public function deleteCat($catId = false)
 	{
-		 $where=array("cat_id"=>$catId);
+		 $where=array("cat_id"=>$catI);
 		 $affected_row=$this->admin_model->delete_db('category',$where);
 	  if($affected_row){
 			  $msg="Record Deleted successfully";
